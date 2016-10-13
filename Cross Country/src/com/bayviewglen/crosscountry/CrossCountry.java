@@ -5,61 +5,61 @@ import java.util.Scanner;
 public class CrossCountry {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);		//declaring scanner
 
-		double runner1Split1;
+		double runner1Split1;			//declaring runner 1's variables
 		double runner1Split2;
 		double runner1Split3;
 
-		System.out.println("Please enter the first and last name of the first runner.");
-		String name1 = input.nextLine();
+		System.out.println("Please enter the first and last name of the first runner.");		//prompting for name input
+		String name1 = input.nextLine();														//next string will be name
 
-		System.out.println("What was the time for the first mile?");
-		String runner1MileOne = input.nextLine();
+		System.out.println("What was the time for the first mile?");							//prompting for time for first mile
+		String runner1MileOne = input.nextLine();												//next input will be first mile time
 
-		int i = runner1MileOne.indexOf(":");
+		int i = runner1MileOne.indexOf(":");													//separate first mile time at :
 
-		int runner1Minutes = Integer.parseInt(runner1MileOne.substring(0, i));
-		double runner1Seconds = Double.parseDouble(runner1MileOne.substring(i + 1));
+		int runner1Minutes = Integer.parseInt(runner1MileOne.substring(0, i));					//before : is int
+		double runner1Seconds = Double.parseDouble(runner1MileOne.substring(i + 1));			//after : is double
 
-		runner1Split1 = (runner1Minutes * 60) + runner1Seconds;
+		runner1Split1 = (runner1Minutes * 60) + runner1Seconds;									//minutes * 60 + seconds is total time for first mile in seconds
 
-		System.out.println("What was the time for the second mile?");
-		String runner1MileTwo = input.nextLine();
+		System.out.println("What was the time for the second mile?");							//prompting for time for second mile and first mile
+		String runner1MileTwo = input.nextLine();												//next input will be second mile time
 
-		int i2 = runner1MileTwo.indexOf(":");
+		int i2 = runner1MileTwo.indexOf(":");													//separate second mile time at :
 
-		int runner1Minutes2 = Integer.parseInt(runner1MileTwo.substring(0, i2));
-		double runner1Seconds2 = Double.parseDouble(runner1MileTwo.substring(i2 + 1));
+		int runner1Minutes2 = Integer.parseInt(runner1MileTwo.substring(0, i2));				//before : is int
+		double runner1Seconds2 = Double.parseDouble(runner1MileTwo.substring(i2 + 1));			//after : is double
 
-		runner1Split2 = (runner1Minutes2 * 60) + runner1Seconds2;
+		runner1Split2 = (runner1Minutes2 * 60) + runner1Seconds2;								//minutes * 60 + seconds is total time for second mile in seconds
 
-		System.out.println("What was the time for the whole five kilometers?");
-		String runner1TotalTime = input.nextLine();
+		System.out.println("What was the time for the whole five kilometers?");					//prompting total time for 5 kilometers
+		String runner1TotalTime = input.nextLine();												//next input will be total time
 
-		int i3 = runner1TotalTime.indexOf(":");
+		int i3 = runner1TotalTime.indexOf(":");													//separate total time at :
 
-		int runner1Minutes3 = Integer.parseInt(runner1TotalTime.substring(0, i3));
-		double runner1Seconds3 = Double.parseDouble(runner1TotalTime.substring(i3 + 1));
+		int runner1Minutes3 = Integer.parseInt(runner1TotalTime.substring(0, i3));				//before : is int
+		double runner1Seconds3 = Double.parseDouble(runner1TotalTime.substring(i3 + 1));		//after : is double
 
-		runner1Split3 = (runner1Minutes3 * 60) + runner1Seconds3;
+		runner1Split3 = (runner1Minutes3 * 60) + runner1Seconds3;								//minutes * 60 + seconds is total time in seconds
 
-		double runner1TempInSeconds = runner1Split2 - runner1Split1;
-		int runner1Split2Minutes = (int) (runner1TempInSeconds / 60);
-		double runner1Split2Seconds = runner1TempInSeconds - runner1Split2Minutes * 60;
+		double runner1TempInSeconds = runner1Split2 - runner1Split1;							//transforming seconds of second mile back into 01:23.45 format
+		int runner1Split2Minutes = (int) (runner1TempInSeconds / 60);							//
+		double runner1Split2Seconds = runner1TempInSeconds - runner1Split2Minutes * 60;			//
 
-		double runner1TempInSeconds2 = runner1Split3 - runner1Split2;
-		int runner1Split3Minutes = (int) (runner1TempInSeconds2 / 60);
-		double runner1Split3Seconds = runner1TempInSeconds2 - runner1Split2Minutes * 60;
+		double runner1TempInSeconds2 = runner1Split3 - runner1Split2;							//transforming seconds of third mile back into 01:23.45 format
+		int runner1Split3Minutes = (int) (runner1TempInSeconds2 / 60);							//
+		double runner1Split3Seconds = runner1TempInSeconds2 - runner1Split2Minutes * 60;		//
 
-		System.out.println("\nRunner One Summary");
+		System.out.println("\nRunner One Summary");												//displaying results of runner 1
 		System.out.println("_________________________________");
 		System.out.println("Runner: " + name1);
 		System.out.println("Split One Time: " + runner1MileOne);
 		System.out.printf("Split Two Time: %d:%.3f\n", runner1Split2Minutes, runner1Split2Seconds);
 		System.out.printf("Split Three Time: %d:%.3f\n", runner1Split3Minutes, runner1Split3Seconds);
 		System.out.println("Total Time: " + runner1TotalTime);
-
+																								//repeat this 5 times with different inputed values and name
 		
 		////////////////////////////////////////////////// Runner 2////////////////////////////////////////////////////////////////
 
