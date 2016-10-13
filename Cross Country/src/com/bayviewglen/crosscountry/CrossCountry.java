@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class CrossCountry {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);		//declaring scanner
+		Scanner input = new Scanner(System.in);													//declaring scanner
 
-		double runner1Split1;			//declaring runner 1's variables
-		double runner1Split2;
-		double runner1Split3;
+		double runner1Split1;																	//declaring runner 1's variables
+		double runner1Split2;																	//
+		double runner1Split3;																	//
 
 		System.out.println("Please enter the first and last name of the first runner.");		//prompting for name input
 		String name1 = input.nextLine();														//next string will be name
@@ -59,6 +59,7 @@ public class CrossCountry {
 		System.out.printf("Split Two Time: %d:%.3f\n", runner1Split2Minutes, runner1Split2Seconds);
 		System.out.printf("Split Three Time: %d:%.3f\n", runner1Split3Minutes, runner1Split3Seconds);
 		System.out.println("Total Time: " + runner1TotalTime);
+		System.out.println("");
 																								//repeat this 5 times with different inputed values and name
 		
 		////////////////////////////////////////////////// Runner 2////////////////////////////////////////////////////////////////
@@ -116,7 +117,8 @@ public class CrossCountry {
 		System.out.printf("Split Two Time: %d:%.3f\n", runner2Split2Minutes, runner2Split2Seconds);
 		System.out.printf("Split Three Time: %d:%.3f\n", runner2Split3Minutes, runner2Split3Seconds);
 		System.out.println("Total Time: " + runner2TotalTime);
-		
+		System.out.println("");
+
 		
 		////////////////////////////////////////////////// Runner 3////////////////////////////////////////////////////////////////
 		
@@ -173,6 +175,7 @@ public class CrossCountry {
 		System.out.printf("Split Two Time: %d:%.3f\n", runner3Split2Minutes, runner3Split2Seconds);
 		System.out.printf("Split Three Time: %d:%.3f\n", runner3Split3Minutes, runner3Split3Seconds);
 		System.out.println("Total Time: " + runner3TotalTime);
+		System.out.println("");
 
 		
 		////////////////////////////////////////////////// Runner 4////////////////////////////////////////////////////////////////
@@ -230,7 +233,8 @@ public class CrossCountry {
 		System.out.printf("Split Two Time: %d:%.3f\n", runner4Split2Minutes, runner4Split2Seconds);
 		System.out.printf("Split Three Time: %d:%.3f\n", runner4Split3Minutes, runner4Split3Seconds);
 		System.out.println("Total Time: " + runner4TotalTime);
-								
+		System.out.println("");
+			
 								
 		//////////////////////////////////////////////////Runner 5////////////////////////////////////////////////////////////////
 	
@@ -287,7 +291,8 @@ public class CrossCountry {
 		System.out.printf("Split Two Time: %d:%.3f\n", runner5Split2Minutes, runner5Split2Seconds);
 		System.out.printf("Split Three Time: %d:%.3f\n", runner5Split3Minutes, runner5Split3Seconds);
 		System.out.println("Total Time: " + runner5TotalTime);
-	
+		System.out.println("");
+
 		
 		/////////////////////////////////////////////////Table////////////////////////////////////////////////////
 	
